@@ -13,10 +13,10 @@
         res.end();
     })
 
-    router.get('/employee/:emp_no', function (req, res) {
+    router.get('/employee/:id', function (req, res) {
       var emp_no = req.params.emp_no;
       console.log(emp_no);
-      var find_employee = 'SELECT * FROM `employee` WHERE `emp_no` = ?';
+      var find_employee = 'SELECT * FROM `employee` WHERE `id` = ?';
       db.query(find_employee, [emp_no], function(error, rows, fields){
         if (error) { res.status(500).json({"status_code": 500, "status_message": "Internal server error"}); }
         res.send(JSON.stringify(rows));
