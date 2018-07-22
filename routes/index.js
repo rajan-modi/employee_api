@@ -14,7 +14,7 @@
     })
 
     router.get('/employee/:id', function (req, res) {
-      var emp_no = req.params.emp_no;
+      var emp_no = req.params.id;
       console.log(emp_no);
       var find_employee = 'SELECT * FROM `employee` WHERE `id` = ?';
       db.query(find_employee, [emp_no], function(error, rows, fields){
