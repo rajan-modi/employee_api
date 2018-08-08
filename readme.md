@@ -25,3 +25,10 @@ get, put, post and delete request can be performed on the endpoints
 4) /employee/:id - delete request deletes the employee with emp_no provided in the param.
 5) /employee/:id - put request updates the employee data.
 
+Project Setup 
+
+1. npm install
+2. npm install -g nodemon
+3. nodemon
+
+After app starts check it locally at http://localhost:3000/employees/1
